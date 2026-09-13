@@ -84,6 +84,10 @@ app.listen("8080",(req,res) => {
     console.log("Listening at port:8080");
 })
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 app.use((req,res,next)=> {
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
