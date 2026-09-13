@@ -1,0 +1,67 @@
+<% layout('/layouts/boilerplate') -%>
+  <div class="row">
+  <div class="col-8 offset-2">
+    <br>
+    <h3>Edit this</h3>
+         <form method="POST" action="/listings/<%=Editlist._id%>?_method=PUT" class="needs-validation" enctype="multipart/form-data" novalidate>
+      
+          <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input name="listing[title]" value="<%= Editlist.title %>" type="text" class="form-control" required/>
+          <div class="invalid-feedback">Please enter Valid title!</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+      <textarea name="listing[description]" class="form-control" required><%=Editlist.description %></textarea>
+      <div class="invalid-feedback">Please enter Short description!</div>
+      </div>
+
+      <div class="mb-3">
+        Original Listing Image : <br>
+        <img src="<%=originalImageUrl%>">
+      </div>
+
+      <div class="mb-3">
+      <label for="image" class="form-label">Upload new Image</label>
+      <input name="listing[image]" type="file" class="form-control"/>
+      </div>
+
+      <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+      <input name="listing[price]" value="<%=Editlist.price %>" type="number" class="form-control" required/>
+      <div class="invalid-feedback">Please enter a valid Number!</div>
+      </div>
+
+      <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country</label>
+      <input
+        name="listing[country]"
+        value="<%=Editlist.country %>"
+        type="text"
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">Please enter Valid a Country name!</div>
+      </div>
+      </div>
+
+      <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input
+        name="listing[location]"
+        value="<%=Editlist.location %>"
+        type="text"
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">Please enter Valid Location!</div>
+      </div>
+      <button class="btn btn-dark edit-btn">Edit</button>
+      <br>
+      <br>
+    </form>
+  </div>
+  </div>
+  
