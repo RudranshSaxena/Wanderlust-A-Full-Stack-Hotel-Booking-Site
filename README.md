@@ -6,9 +6,7 @@ The project was built to gain practical experience in **frontend development, ba
 
 ## 🌐 Links
 
-🔗 **Live Demo:** [Add Deployment Link Here]
-💻 **GitHub Repository:** [Add Repository Link Here]
-
+🔗 **Live Demo:** https://wanderlust-a-full-stack-hotel-booking.onrender.com
 ---
 
 ## ✨ Features
